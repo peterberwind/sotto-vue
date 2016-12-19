@@ -4,22 +4,22 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App'
 
-import Dashboard from './components/Dashboard'
-import Projects from './components/Projects'
-import Activity from './components/Activity'
-import Team from './components/Team'
-import Account from './components/Account'
-import Profile from './components/Profile'
+import DashboardView from './components/DashboardView'
+import ProjectsView from './components/ProjectsView'
+import ActivityView from './components/ActivityView'
+import TeamView from './components/TeamView'
+import AccountView from './components/AccountView'
+import ProfileView from './components/ProfileView'
 
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', component: Dashboard },
-  { path: '/projects', component: Projects },
-  { path: '/activity', component: Activity },
-  { path: '/team', component: Team },
-  { path: '/account', component: Account },
-  { path: '/profile', component: Profile }
+  { path: '/', component: DashboardView },
+  { path: '/projects', component: ProjectsView },
+  { path: '/activity', component: ActivityView },
+  { path: '/team', component: TeamView },
+  { path: '/account', component: AccountView },
+  { path: '/profile', component: ProfileView }
 ]
 
 const router = new VueRouter({

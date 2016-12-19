@@ -1,11 +1,17 @@
 <template>
   <div class="projects">
     <h1>{{ msg }}</h1>
+    <ProjectItem></ProjectItem>
   </div>
 </template>
 <script>
+import ProjectItem from './ProjectItem'
+
 export default {
   name: 'projects',
+  components: {
+    'ProjectItem': ProjectItem
+  },
   data () {
     return {
       msg: 'Projects',

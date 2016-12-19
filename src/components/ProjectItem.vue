@@ -1,5 +1,5 @@
 <template>
-  <div class="ui fluid segments grid">
+  <div class="ui fluid segments grid client">
     <div class="row segment summary">
       <div class="column six wide">
         <p class="client__name">{{ clientName }}</p>
@@ -17,18 +17,18 @@
         <i class="dropdown icon client__toggle"></i>
       </div>
     </div>
-    <div class="row segment project">
+    <div class="row segment project project">
       <div class="column six wide">
-        <p class="project__name">New Dashboard</p>
+        <p class="project__name">{{ projectName }}</p>
       </div>
       <div class="column three wide">
-        <p class="project__valid-date">Oct. 21, 2017</p>
+        <p class="project__valid-date">{{ projectDate }}</p>
       </div>
       <div class="column three wide">
-        <p class="project__budget">$4,235</p>
+        <p class="project__budget">{{ projectBudget }}</p>
       </div>
       <div class="column three wide">
-        <a class="ui green label project__status">Accepted</a>
+        <a class="ui green label project__status">{{ projectStatus }}</a>
       </div>
       <div class="column one wide">
         <a class="project__actions">Actions</a>
@@ -39,10 +39,14 @@
 
 <script>
 export default {
-  name: 'Client',
+  name: 'projects',
   data () {
     return {
-      clientName: 'Nike'
+      clientName: 'Nike',
+      projectName: 'Nike Shopify Site',
+      projectDate: 'Oct 21, 2017',
+      projectBudget: '$13,485',
+      projectStatus: 'Accepted'
     }
   }
 }
@@ -50,5 +54,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.client__name {
+  font-size: 1.6em;
+}
 
 </style>
