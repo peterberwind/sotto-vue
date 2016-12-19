@@ -1,14 +1,29 @@
 <template>
-  <div id="app">
-    <router-link to="/dashboard">Dashboard</router-link>
-    <router-link to="/projects">Projects</router-link>
-    <router-link to="/activity">Activity</router-link>
-    <router-link to="/team">Team</router-link>
-    <router-view></router-view>
+  <div>
+    <nav>
+      <div class="ui inverted menu">
+        <router-link class="item" to="/dashboard">Dashboard</router-link>
+        <router-link class="item" to="/projects">Projects</router-link>
+        <router-link class="item" to="/activity">Activity</router-link>
+        <router-link class="item" to="/team">Team</router-link>
+        <div class="ui simple dropdown item right">
+          Account <i class="dropdown icon"></i>
+          <div class="menu">
+            <router-link class="item" to="/profile">My Profile</router-link>
+            <router-link class="item" to="/account">Account Settings</router-link>
+            <a class="item">Log Out</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <router-view></router-view>
+    </main>
   </div>
 </template>
 <script>
-// import Dashboard from './components/Dashboard'
+/* TODO: Not sure what this code does? */
+// import Navigation from './components/Navigation'
 // import Projects from './components/Projects'
 // import Activity from './components/Activity'
 // import Team from './components/Team'
@@ -25,12 +40,12 @@ export default {
 </script>
 
 <style>
+/*TODO: Make this more modular*/
+@import '../node_modules/semantic-ui-css/semantic.min.css';
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

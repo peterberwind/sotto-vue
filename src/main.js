@@ -4,10 +4,15 @@ import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
 
+// import '../node_modules/semantic-ui-css/semantic.min.css'
+// import '../node_modules/semantic-ui-css/semantic.min.js'
+
 import Dashboard from './components/Dashboard'
 import Projects from './components/Projects'
 import Activity from './components/Activity'
 import Team from './components/Team'
+import Account from './components/Account'
+import Profile from './components/Profile'
 
 Vue.use(VueRouter)
 
@@ -15,11 +20,13 @@ const routes = [
   { path: '/dashboard', component: Dashboard },
   { path: '/projects', component: Projects },
   { path: '/activity', component: Activity },
-  { path: '/team', component: Team }
+  { path: '/team', component: Team },
+  { path: '/account', component: Account },
+  { path: '/profile', component: Profile }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'history', // enable html5 mode
   routes // short for routes: routes
 })
 

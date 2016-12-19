@@ -1,15 +1,15 @@
 <template>
-  <div class="team">
+  <div class="account">
     <h1>{{ msg }}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'team',
+  name: 'account',
   data () {
     return {
-      msg: 'Team'
+      msg: 'Account'
     }
   }
 }
@@ -17,7 +17,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 h1, h2 {
   font-weight: normal;
 }
