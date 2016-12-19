@@ -1,8 +1,8 @@
 <template>
   <div>
     <nav>
-      <div class="ui inverted menu">
-        <router-link class="item" to="/dashboard">Dashboard</router-link>
+      <div class="ui menu">
+        <router-link class="item" to="/dashboard">Sotto</router-link>
         <router-link class="item" to="/projects">Projects</router-link>
         <router-link class="item" to="/activity">Activity</router-link>
         <router-link class="item" to="/team">Team</router-link>
@@ -16,8 +16,13 @@
         </div>
       </div>
     </nav>
-    <main>
-      <router-view></router-view>
+    <main class="ui container">
+      <router-view
+        class="view"
+        keep-alive
+        transition
+        transition-mode="out-in">
+      </router-view>
     </main>
   </div>
 </template>
@@ -47,5 +52,8 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.ui.menu {
+  min-height: 72px;
 }
 </style>

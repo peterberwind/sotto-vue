@@ -1,19 +1,17 @@
 <template>
   <nav>
-    <div class="ui inverted menu">
-    <a href="#" class="header item">
-      Sotto
-    </a>
-    <a href="#" class="item">Projects</a>
-    <a href="#" class="item">Templates</a>
-    <a href="#" class="item">Activity</a>
-    <a href="#" class="item">Team</a>
-    <div class="ui simple dropdown item right">
-      Account <i class="dropdown icon"></i>
-      <div class="menu">
-        <a class="item">My Profile</a>
-        <a class="item">Account Settings</a>
-        <a class="item">Log Out</a>
+    <div class="ui menu">
+      <router-link class="item" to="/dashboard">Sotto</router-link>
+      <router-link class="item" to="/projects">Projects</router-link>
+      <router-link class="item" to="/activity">Activity</router-link>
+      <router-link class="item" to="/team">Team</router-link>
+      <div class="ui simple dropdown item right">
+        Account <i class="dropdown icon"></i>
+        <div class="menu">
+          <router-link class="item" to="/profile">My Profile</router-link>
+          <router-link class="item" to="/account">Account Settings</router-link>
+          <a class="item">Log Out</a>
+        </div>
       </div>
     </div>
   </nav>

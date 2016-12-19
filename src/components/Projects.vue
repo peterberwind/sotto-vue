@@ -3,13 +3,13 @@
     <h1>{{ msg }}</h1>
   </div>
 </template>
-
 <script>
 export default {
   name: 'projects',
   data () {
     return {
-      msg: 'Projects'
+      msg: 'Projects',
+      clients: []
     }
   }
 }
@@ -17,6 +17,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.client__name {
+  font-size: 1.6em;
+}
+
 h1, h2 {
   font-weight: normal;
 }

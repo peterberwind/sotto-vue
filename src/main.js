@@ -1,11 +1,8 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './App'
 import VueRouter from 'vue-router'
-
-// import '../node_modules/semantic-ui-css/semantic.min.css'
-// import '../node_modules/semantic-ui-css/semantic.min.js'
+import App from './App'
 
 import Dashboard from './components/Dashboard'
 import Projects from './components/Projects'
@@ -17,7 +14,7 @@ import Profile from './components/Profile'
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/dashboard', component: Dashboard },
+  { path: '/', component: Dashboard },
   { path: '/projects', component: Projects },
   { path: '/activity', component: Activity },
   { path: '/team', component: Team },
